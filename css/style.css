@@ -383,6 +383,10 @@ nav ul{
   justify-content: flex-end;
 }
 
+#logo {
+  margin:20px;
+}
+
 
 }  /*End the media query*/
 

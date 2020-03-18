@@ -3,41 +3,56 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Home</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+		<div class="skip"><a href="#main">Skip to Main Content</a></div>
 <header>
 	<nav>
-		<ol>
+		<ul>
 			<li><a href="index.html">Home</a></li>
 			<li><a href="about.html">About </a></li>
       <li><a href="designer-type.html">Designer Type</a></li>
-    	<li><a href="contact.html">Contact</a></li>
-		</ol>
+    	<li><a class="active" href="contact.html">Contact</a></li>
+		</ul>
 	</nav>
-
-	<h1>
-	About me
-	</h1>
 </header>
 
 <main>
-	<p>
-	My name is Bonnie Jiang, a passionate problem solver, storyteller and of course —
-  A people person!
-	</p>
-  <p>
-    <img src = "images/self-portrait.png" alt=""/>
-    </p>
+	<h1>
+	About me
+	</h1>
+	<svg viewBox="0 0 1920 200" preserveAspectRatio="none" fill= #27496d ><path class="c1" d="M0 0h1920v64l-238-20-448 143L396 45 0 103z"></path></svg>
+
+
+<div class="content">
+		<a name="main" </a>
+	<div class = "wrapper">
+		<h2> This is Bonnie, a <span></span></h2>
+	</div>
+	<div class="flip-card">
+		 <div class="flip-card-inner">
+		   <div class="flip-card-front">
+		    <img src="images/self-portrait.png" alt="Self Portrait" >
+		   </div>
+		   <div class="flip-card-back">
+		     <h1>Bonnie Jiang</h1>
+		     <a href="https://bonniejiang.com">Portfolio</a>
+		   </div>
+		  </div>
+		</div>
 	<p>
 I am a first-year master student with dual degrees in UX Design and Design Science. I speak multiple design languages, from UX design to engineering, to solve complex problems. I am familiar with the product development process and have worked with many engineers and marketing professionals on the project. Therefore, I speak various design languages and understand how to convey them to my audience and teammates.
 	</p>
 </main>
 
 <footer>
-Bonnie Jiang; 2020
+	Created by Bonnie Jiang. Interested in learning more about me?
+	<ul>
+		<li><a class="footernav" href="https://www.linkedin.com/in/bonnie-q-jiang/">LinkedIn</a></li>
+		<li><a class="footernav" href="https://www.bonniejiang.com">Portfolio</a></li>
+	</ul>
 </footer>
 </body>
 </html>

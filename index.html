@@ -5,48 +5,91 @@
 	<meta charset="UTF-8">
 	<title>Home</title>
 	<link rel="stylesheet" href="css/style.css">
-	<title>Design Style Assessment</title>
+	<script src = "js/portfolio.js"></script>
 </head>
 
 <body>
 	<div class="skip"><a href="#main">Skip to Main Content</a></div>
+<header>
 	<nav>
 		<ul>
-			<li><a href="index.html">Home</a></li>
+			<li><a class="active" href="index.html">Home</a></li>
 			<li><a href="about.html">About </a></li>
-      <li><a href="designer-type.html">Designer Type</a></li>
-    	<li><a href="contact.html">Contact</a></li>
-		</l>
+			<li><a href="designer-type.html">Designer Type</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
 	</nav>
-<header>
-	<h1>
-	Design Style Assessment
-	</h1>
 </header>
-
 <main>
-	<p>
-	Come and do a 5 min online quiz to find out what kind of designer you are!
-	</p>
+	<h1>
+		"How might we improve collaboration and the quality of our design?"
+	</h1>
+<svg viewBox="0 0 1920 200" preserveAspectRatio="none" fill= #27496d ><path class="c1" d="M0 0h1920v64l-238-20-448 143L396 45 0 103z"></path></svg>
 	<div class="img-magnifier-container">
-  <img id="myimage" src="images/prototype.png" alt="Girl">
-</div>
-<div class="img-magnifier-container">
-<img id="myimage" src="images/prototype.png" alt="Girl">
-</div>
-<div class="img-magnifier-container">
-<img id="myimage" src="images/prototype.png" alt="Girl">
-</div>
-<div class="img-magnifier-container">
-<img id="myimage" src="images/prototype.png" alt="Girl">
-</div>
-	<p>
-In today’s large company, though working on the same project, different design teams, such as engineering design, industrial design, user interface design, manufacturing, and marketing, usually do their design work with different design philosophies and different design methods. The lack of understanding of each other’s design philosophy could cause difficulty in communication between teams when working for the same project, which will cause inefficiency and conflicts.
+  	<img id="groupdesigner" src="images/groupphoto.png" alt="find-which-type ">
+	</div>
+	<div>
+		<h2 id = "colorchange">
+		<a name="main" </a>
+		Find out which type of designers you are!
+		</h2>
+	</div>
+	<section id="rangeselector">
+		<div class="slidecontainer">
+			When gathering data, which one is more aligned to your process?
+			<br>
+			<label for="lqSelector">Qualitative</label>
+			<input type="range" id="lqSelector" name="lqSelector"
+			 min="0" max="100" class="slider">Quantitative
+		</div>
+		<div class="slidecontainer">
+			Which do you value more for a product?
+			<br>
+			<label for="afSelector">Aesthetic</label>
+			<input type="range" id="afSelector" name="afSelector"
+			 min="0" max="100" class="slider">Function
+		</div>
+		<div class="slidecontainer">
+			When solving a problem, which one is more important to you?
+			<br>
+			<label for="piSelector">Process</label>
+			<input type="range" id="piSelector" name="piSelector"
+			 min="0" max="100" class='slider'>Insight
+		</div>
+		<div class="slidecontainer">
+			When solving a problem, which one is more important to you?
+			<br>
+			<label for="scSelector">Independent</label>
+			<input type="range" id="scSelector" name="scSelector"
+			 min="0" max="100" class='slider'>Cocreative
+		</div>
+	</section>
+	<section id="indext-intro">
+		<p>
+			In today’s large company, though working on the same project, different design teams, such as engineering design, industrial design, user interface design, manufacturing, and marketing, usually do their design work with different design philosophies and different design methods. The lack of understanding of each other’s design philosophy could cause difficulty in communication between teams when working for the same project, which will cause inefficiency and conflicts.
 	</p>
+	</section>
+	<section id=indext-text>
+		<p>
+			For these reasons, this assessment is designed to help participants understand each other’s design work through collaborating in an interdisciplinary team and working on a design problem together. The goal is to improve the communication between different positions to generate a harmonious and highly efficient working environment in the design process.
+
+		</p>
+	</section>
+
 </main>
 
 <footer>
-Bonnie Jiang; 2020
+	Created by Bonnie Jiang. Interested in learning more about me?
+		<ul>
+			<li><a class="footernav" href="https://www.linkedin.com/in/bonnie-q-jiang/">LinkedIn</a></li>
+			<li><a class="footernav" href="https://www.bonniejiang.com">Portfolio</a></li>
+		</ul>
 </footer>
+
+<script>
+/* Initiate Magnify Function
+with the id of the image, and the strength of the magnifier glass:*/
+/*magnify("groupdesigner", 2);*/
+</script>
 </body>
 </html>

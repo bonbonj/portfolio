@@ -2,41 +2,154 @@ html{
     scroll-behavior: smooth;
 }
 
+* {box-sizing: border-box;}
 body{
-  font-size: 18px;
-  margin: 0;
-  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  margin: auto;
 }
 
-h1{
-  font-size: 50px;
-  line-height: 1;
+
+/*nav bar*/
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
   text-align: center;
 }
 
-p{
-  font-size: 25px;
-  line-height: 1.5;
-  margin: 100px;
-  text-align: left;
-}
-
-nav li{
-  display:inline;
-  padding-right:20px;
-
-}
-
 nav a{
-  color: black;
-  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  text-transform: capitalize;
+  font-weight: 550;
+  font-size: 20px;
+  color: #465881;
   text-decoration: none;
+  line-height: 32px;
+  text-align: center;
 }
 
-nav a:hover{
+nav a:hover, a:focus{
   text-decoration: underline;
+  transition-duration: 1s;
 }
 
+
+.active {
+  background-color: #0c7b93;
+  color: #ffffff;
+  border: 2px;
+  border-radius: 8px;
+  border-style: groove;
+}
+
+.active:hover, .active:focus{
+  color: #ffffff;
+  transition-duration: 1s;
+}
+
+/*footer*/
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 550;
+  color:#575757;
+
+}
+
+footer li{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.footernav{
+  color: #0c7b93;
+  text-decoration: none;
+  line-height: 32px;
+  text-align: center;
+}
+
+.footernav:hover, .footernav:focus{
+  text-decoration: underline;
+  transition-duration: 1s;
+}
+
+h1{
+  background: #27496d;
+  text-align: center;
+  font-size: 35px;
+  letter-spacing: 5px;
+  line-height: 50px;
+  color: rgba(255, 255, 255, 0.8);
+  margin:0;
+  padding:80px;
+}
+h2{
+  margin:0;
+  padding:60px;
+  text-align: center;
+}
+
+h3{
+  font-size:30px;
+  margin: 0px;
+  padding: 10px;
+}
+
+h4{
+  color:#575757;
+  letter-spacing: normal;
+  margin: 0px;
+  padding: 10px;
+}
+
+h5{
+  font-size: 18px;
+  font-weight: 400;
+  color:#575757;
+  letter-spacing: normal;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+p{
+  padding: 40px;
+  text-align: left;
+  line-height: 35px;
+  color: #7d7d7d
+}
+
+#indext-text {
+  padding-bottom: 100px;
+}
+
+img{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+  height: auto;
+}
+
+#groupdesigner{
+  position: relative;
+  top:-150px;
+}
+
+/*skip tp content*/
 .skip a{
   background: white;
   left: 0;
@@ -48,97 +161,214 @@ nav a:hover{
   top: -40px;
 }
 
-
 .skip a:focus{
   top: 0;
 }
 
+/*Image Gallery*/
 
-*:focus {
-    border-color: black;
-    border-style: solid;
-    border-width: 2px;
+.container{
+  display: grid;
+  grid-auto-flow: row;
+  grid-row-gap: 30px;
+  grid-column-gap: 30px;
+  grid-template-rows: 1fr;
+  grid-template-columns:1fr;
+  margin: auto;
+  padding-left:200px;
+  padding-right:200px;
+  align-items:baseline;
 }
 
-footer{
-  background-color: black;
-  color: white;
-  grid-column: 1 / -1;  /*Can you explain what this does?*/
-  grid-row: 7 / auto;   /*Can you rewrite it?*/
-  padding-top: 30px;
+.container img{
+  padding-bottom: 50px
+}
+
+.container img:hover{
+  position:relative;
+  top:-20px
+}
+
+.identify h3{
+  color:#698474;
+}
+.concept h3{
+  color:#A85400;
+}
+.develope h3{
+  color:#b7472a;
+}
+.launch h3{
+  color:#0f4c75;
+}
+
+/*css animation: color change*/
+#colorchange {
+  animation-name: change;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes change {
+  0%   {color: #27496d;}
+  25%  {color: #698474;}
+  50%  {color: #A85400;}
+  100% {color: #b7472a;}
+}
+/*magnifier-glass, modified from resouce of https://www.w3schools.com/howto/howto_js_image_magnifier_glass.asp*/
+.img-magnifier-container {
+  position: relative;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 50%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 100px;
+  height: 100px;
+}
+
+/*Slider, modified from resouce of https://www.w3schools.com/howto/howto_js_rangeslider.asp*/
+.slidecontainer {
   text-align: center;
+  padding: 40px;
+  line-height: 35px;
 }
 
-nav{
-  background-color: #ddd;
-  padding: 20px 0;
-  text-align: left;
-
-  grid-column: 1 / -1;
-  grid-row: 1 / span 1;
-
+.slider {
+  -webkit-appearance: none;
+  width: 40%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
 }
 
-header{
-  background-attachment: fixed; /* Parallax effect */
-  background-position: center;  /* Parallax effect */
-  background-repeat: no-repeat; /* Parallax effect */
-  background-size: cover;       /* Parallax effect */
-  color: #7e2323;
-  height: 400px;                /* Parallax effect */
-
-  /* Your code here */
-  /* Set background-image to header.jpg in the images folder */
-  /* Span one row
-  background: url("../images/header.jpg");
-  grid-row: 2 / span 1;
-  grid-column: 1 / -1;*/
+.slider:hover {
+  opacity: 1;
 }
 
-header p{
-  color: white;
-  font-size: 24px;
-  padding: 0 100px;
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #00a8cc;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #00a8cc;
+  cursor: pointer;
+}
+/*text effect*/
+span:before{
+  content:"People Person";
+  animation: animate infinite 5s;
+}
+
+@keyframes animate{
+  0%   {
+    content:"Researcher";
+    color: #27496d;}
+  25%  {
+    color: #698474;
+    content:"Designer"
+  }
+  50%  {
+    color: #A85400;
+    content:"Strategist"}
+  100% {
+    content:"Engineer"
+    color: #b7472a;}
+}
+
+/*flip card*/
+.flip-card {
+  background-color: transparent;
+  width: 500px;
+  height: 350px;
+  perspective: 1000px;
+  margin: auto;
+  width: 50%;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
   text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card:focus .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 
-.container img {
-    width: 100%;
-    height: auto;
+.flip-card-back {
+  color: #0c7b93;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back a:visited{
+  color:#0c7b93;
+}
+
+/* Tablet layout */
+@media all and (min-width:720px){
+
+nav ul{
+  flex-direction: row;
+  justify-content: center;
+}
+
+nav a{
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .container{
-  /*Your code here  */
-  /* See documentation for mobile view */
-  display: grid;
-  grid-row-gap: 15px;
-  grid-template-columns:repeat(3,auto) ;
-  grid-template-rows: repeat(4,auto);
-  margin: auto;
+  grid-template-rows: repeat(8,auto) ;
+  grid-template-columns:repeat(2,auto);
+	}
 
 }
+@media only screen and (min-width: 1100px){
 
+/* Desktop layout */
+.container{
+  grid-template-rows: repeat(4,auto) ;
+  grid-template-columns:repeat(4,auto);
+}
 
-@media all and (max-width: 800px){
+header{
+  flex-direction: row-reverse;
+}
 
-  nav{
-    background-color: #ddd;
-    text-align: right;
-    padding: 35px 0px;
-    align-self: center;
-  }
-
-  .container{
-    /*Your code here  */
-    /* See documentation for mobile view */
-    display: grid;
-    grid-row-gap: 15px;
-    grid-template-columns: 1fr ;
-    grid-template-rows: repeat(5,auto);
-    margin: auto;
-
-  }
+nav ul{
+  justify-content: flex-end;
+}
 
 
 }  /*End the media query*/
@@ -152,21 +382,4 @@ header p{
     -webkit-transition: none;
     transition: none;
   }
-}
-* {box-sizing: border-box;}
-
-.img-magnifier-container {
-  filter: grayscale();
-  margin: auto;
-  display: inline-block;
-}
-
-.img-magnifier-container:hover {
-  border-style: solid;
-  border-color: #eb9788;
-  border-radius: 10px;
-  border-width: 10px;
-  filter: none;
-  /*transition-duration: 1s;*/
-  -webkit-filter: grayscale(0%);
 }

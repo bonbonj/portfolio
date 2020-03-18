@@ -70,11 +70,12 @@ footer{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background: #ffffff;
+  background: #0c7b93;
   font-family: "Raleway", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
+  padding:20px;
   font-weight: 550;
-  color:#575757;
+  color:#ffffff;
 
 }
 
@@ -86,7 +87,7 @@ footer li{
 }
 
 .footernav{
-  color: #0c7b93;
+  color: #ffffff;
   text-decoration: none;
   line-height: 32px;
   text-align: center;
@@ -108,8 +109,9 @@ h1{
   padding:80px;
 }
 h2{
+  color:#0c7b93;
   margin:0;
-  padding:60px;
+  padding:200px;
   text-align: center;
 }
 
@@ -159,6 +161,11 @@ img{
   top:-150px;
 }
 
+#myimage{
+  width: 100%
+  height:auto;
+}
+
 /*skip tp content*/
 .skip a{
   background: white;
@@ -191,12 +198,12 @@ img{
 }
 
 .container img{
-  padding-bottom: 50px
+  padding-bottom: 50px;
+  position: relative;
 }
 
 .container img:hover{
-  position:relative;
-  top:-20px
+  top:-20px;
 }
 
 .identify h3{
@@ -252,8 +259,8 @@ img{
   border-radius: 50%;
   cursor: none;
   /*Set the size of the magnifier glass:*/
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
 }
 
 /*Slider, modified from resouce of https://www.w3schools.com/howto/howto_js_rangeslider.asp*/
@@ -392,11 +399,38 @@ input[type=submit]:hover {
   background-color: #0c7b93;
 }
 
+/*parallax*/
+.parallax {
+  /* The image used */
+  background-image: url("../images/parallax.png");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* Tablet layout */
-@media all and (min-width:720px){
+@media all and (min-width:800px){
 
 .hidden{
   display: flex;
+}
+
+h1{
+  font-size: 60px;
+  line-height: 100px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+p{
+  padding-left: 150px;
+  padding-right: 150px;
 }
 nav ul{
   flex-direction: row;
@@ -419,9 +453,19 @@ nav a{
   	}
 
 }
-@media only screen and (min-width: 1100px){
+@media only screen and (min-width: 1200px){
 
 /* Desktop layout */
+
+h1{
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+p{
+  padding-left: 300px;
+  padding-right: 300px;
+}
 .container{
   grid-template-rows: repeat(4,auto) ;
   grid-template-columns:repeat(4,auto);
@@ -456,4 +500,39 @@ nav ul{
     -webkit-transition: none;
     transition: none;
   }
+
+  #colorchange{
+    animation:none;
+  }
+
+  span:before{
+    content:"People Person";
+    animation: none;
+  }
+
+  nav a:hover, a:focus{
+    transition-duration: none;
+  }
+
+  .active:hover, .active:focus{
+    transition-duration: none;
+  }
+
+  .footernav:hover, .footernav:focus{
+    transition-duration: none;
+  }
+
+  .flip-card-inner {
+    transition: transform 0s;
+  }
+
+  .slider{
+    transition: none;
+  }
+
+  .container img:hover{
+    top:0px;
+  }
+
+
 }

@@ -13,14 +13,15 @@
   gtag('js', new Date());
   gtag('config', 'UA-160995294-1');
 	</script>
-
+  <link rel="stylesheet" href="css/html5reset.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script src = "js/portfolio.js"></script>
 </head>
 
 <body>
 		<div class="skip"><a href="#main">Skip to Main Content</a></div>
 <header>
-	   <img src="images/logo.png" alt="logo" class="hidden" id = "logo">
+	   <img src="images/logo.png" alt="logo of bonnie" class="hidden" id = "logo">
 	<nav>
 		<ul>
 			<li><a href="index.html">Home</a></li>
@@ -36,24 +37,34 @@
 		What is Designer Type Assessment?
 	</h1>
 	<svg viewBox="0 0 1920 200" preserveAspectRatio="none" fill= #27496d ><path class="c1" d="M0 0h1920v64l-238-20-448 143L396 45 0 103z"></path></svg>
-	<p>
-		<a name="main" </a>
-		The design philosophy assessment will be used to identify what participants’ personal design style is and how each thinks about design. This quiz will be useful in understanding the strengths that participants bring to their teams when designing solutions.
+	<p id = "main">
+		The designer type assessment will be used to identify what participants’ personal design style is and how each thinks about design. This quiz will be useful in understanding the strengths that participants bring to their teams when designing solutions.
 	</p>
+	<div class="img-magnifier-container">
+	  <img id="myimage" src="images/team-brainstorming.jpg" alt="team brainstorming session" width="1500" height="800">
+	</div>
 	<p>
-		There will be a design philosophy assessment to be completed by each participant before the first day of the class. This design philosophy assessment will be used to identify what participants’ personal design style is and how they think about design. This quiz will be useful in understanding the strengths that they bring to the team when designing solutions to problems. Sample questions can be found below and participants are asked to rank how much they agree with the statement on a scale of 1 - 5 (1 being the lowest i.e. does not agree at all and 5 being the highest i.e. agrees very much).
+		For these reasons, this three-day workshop is designed to help participants understand each other’s design work through collaborating in an interdisciplinary team and working on a design problem together. The goal is to improve the communication between different positions to generate a harmonious and highly efficient working environment in the design process.
 	</p>
-  <p>
+		<div class ="parallax"></div>
+	<p>
+		There will be a designer type assessment to be completed by each participant before the first day of the class. This design philosophy assessment will be used to identify what participants’ personal design style is and how they think about design. This quiz will be useful in understanding the strengths that they bring to the team when designing solutions to problems.
+	</p>
 
-    </p>
-</main>
+		<svg viewBox="0 0 1920 200" preserveAspectRatio="none" fill= #0c7b93 ><polygon class="c1" points="1920 823 0 823 0 0 396 101 835 31 1574 149 1920 17 1920 823"></path></svg>
+		</main>
 
-<footer>
-	Created by Bonnie Jiang. Interested in learning more about me?
-	<ul>
-		<li><a class="footernav" href="https://www.linkedin.com/in/bonnie-q-jiang/">LinkedIn</a></li>
-		<li><a class="footernav" href="https://www.bonniejiang.com">Portfolio</a></li>
-	</ul>
-</footer>
+		<footer>
+			Created by Bonnie Jiang. Interested in learning more about me?
+				<ul>
+					<li><a class="footernav" href="https://www.linkedin.com/in/bonnie-q-jiang/">LinkedIn</a></li>
+					<li><a class="footernav" href="https://www.bonniejiang.com">Portfolio</a></li>
+				</ul>
+		</footer>
+		<script>
+		/* Initiate Magnify Function
+		with the id of the image, and the strength of the magnifier glass:*/
+		magnify("myimage", 2)
+		</script>
 </body>
 </html>

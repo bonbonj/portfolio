@@ -12,13 +12,14 @@
   gtag('js', new Date());
   gtag('config', 'UA-160995294-1');
 	</script>
+  <link rel="stylesheet" href="css/html5reset.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 		<div class="skip"><a href="#main">Skip to Main Content</a></div>
 <header>
-	   <img src="images/logo.png" alt="logo" class="hidden" id = "logo">
+	   <img src="images/logo.png" alt="logo of bonnie" class="hidden" id = "logo">
 	<nav>
 		<ul>
 			<li><a href="index.html">Home</a></li>
@@ -36,12 +37,11 @@
 	<svg viewBox="0 0 1920 200" preserveAspectRatio="none" fill= #27496d ><path class="c1" d="M0 0h1920v64l-238-20-448 143L396 45 0 103z"></path></svg>
 
 
-<div class="content">
-		<a name="main" </a>
+<div class="content" id = "main">
 	<div class = "wrapper">
 		<h2> This is Bonnie, a <span></span></h2>
 	</div>
-	<div class="flip-card">
+	<div class="flip-card" tabindex="0">
 		 <div class="flip-card-inner">
 		   <div class="flip-card-front">
 		    <img src="images/self-portrait.png" alt="Self Portrait" >
@@ -64,18 +64,20 @@ I am a first-year master student with dual degrees in UX Design and Design Scien
 	</div>
 
 	<form action="https://formspree.io/xdoddekz" method="POST">
-  <input class="contact" type="text" name="name" placeholder="Your Name">
-  <input class="contact" type="email" name="_replyto" placeholder="Your Email">
+	<label for="name">Name</label>
+	<input class="contact" type="text" id="name" name="name" placeholder="Your Name">
+	<label for="_replyto">Email</label>
+  <input class="contact" type="email" id="_replyto" name="_replyto" placeholder="Your Email">
   <input class="contact" type="submit" value="Send">
 </form>
+<svg viewBox="0 0 1920 200" preserveAspectRatio="none" fill= #0c7b93 ><polygon class="c1" points="1920 823 0 823 0 0 396 101 835 31 1574 149 1920 17 1920 823"></path></svg>
 </main>
-
 <footer>
 	Created by Bonnie Jiang. Interested in learning more about me?
-	<ul>
-		<li><a class="footernav" href="https://www.linkedin.com/in/bonnie-q-jiang/">LinkedIn</a></li>
-		<li><a class="footernav" href="https://www.bonniejiang.com">Portfolio</a></li>
-	</ul>
+		<ul>
+			<li><a class="footernav" href="https://www.linkedin.com/in/bonnie-q-jiang/">LinkedIn</a></li>
+			<li><a class="footernav" href="https://www.bonniejiang.com">Portfolio</a></li>
+		</ul>
 </footer>
 </body>
 </html>

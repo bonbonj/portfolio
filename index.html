@@ -12,15 +12,15 @@
   gtag('js', new Date());
   gtag('config', 'UA-160995294-1');
 	</script>
-
+  <link rel="stylesheet" href="css/html5reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src = "js/portfolio.js"></script>
 </head>
 
 <body>
-	<div class="skip"><a href="#main">Skip to Main Content</a></div>
+	<div class="skip"><a href="#colorchange">Skip to Main Content</a></div>
 <header>
-   <img src="images/logo.png" alt="logo" class="hidden" id = "logo">
+   <img src="images/logo.png" alt="logo of bonnie" class="hidden" id = "logo">
 	<nav>
 		<ul>
 			<li><a class="active" href="index.html">Home</a></li>
@@ -40,7 +40,6 @@
 	</div>
 	<div>
 		<h2 id = "colorchange">
-		<a name="main" </a>
 		Find out which type of designers you are!
 		</h2>
 	</div>
@@ -48,32 +47,36 @@
 		<div class="slidecontainer">
 			When gathering data, which one is more aligned to your process?
 			<br>
-			<label for="lqSelector">Qualitative</label>
+			<label for="lqSelector">Qualitative (L)</label>
 			<input type="range" id="lqSelector" name="lqSelector"
-			 min="0" max="100" class="slider">Quantitative
+			 min="0" max="100" class="slider">Quantitative (Q)
 		</div>
 		<div class="slidecontainer">
 			Which do you value more for a product?
 			<br>
-			<label for="afSelector">Aesthetic</label>
+			<label for="afSelector">Aesthetic (A)</label>
 			<input type="range" id="afSelector" name="afSelector"
-			 min="0" max="100" class="slider">Function
+			 min="0" max="100" class="slider">Function (F)
 		</div>
 		<div class="slidecontainer">
 			When solving a problem, which one is more important to you?
 			<br>
-			<label for="piSelector">Process</label>
+			<label for="piSelector">Process (P)</label>
 			<input type="range" id="piSelector" name="piSelector"
-			 min="0" max="100" class='slider'>Insight
+			 min="0" max="100" class='slider'>Insight (I)
 		</div>
 		<div class="slidecontainer">
 			When solving a problem, which one is more important to you?
 			<br>
-			<label for="scSelector">Independent</label>
+			<label for="scSelector">Independent (S)</label>
 			<input type="range" id="scSelector" name="scSelector"
-			 min="0" max="100" class='slider'>Cocreative
+			 min="0" max="100" class='slider'>Cocreative (C)
 		</div>
+		<h2>
+			Find your designer type in "Desiger Type" page using the letter combination from the slider results!
+		</h2>
 	</section>
+	<div class ="parallax"></div>
 	<section id="indext-intro">
 		<p>
 			In today’s large company, though working on the same project, different design teams, such as engineering design, industrial design, user interface design, manufacturing, and marketing, usually do their design work with different design philosophies and different design methods. The lack of understanding of each other’s design philosophy could cause difficulty in communication between teams when working for the same project, which will cause inefficiency and conflicts.
@@ -85,21 +88,16 @@
 
 		</p>
 	</section>
-
+<svg viewBox="0 0 1920 200" preserveAspectRatio="none" fill= #0c7b93 ><polygon class="c1" points="1920 823 0 823 0 0 396 101 835 31 1574 149 1920 17 1920 823"></path></svg>
 </main>
 
 <footer>
-	Created by Bonnie Jiang. Interested in learning more about me?
 		<ul>
+			<li>Created by Bonnie Jiang. Interested in learning more about me?</li>
 			<li><a class="footernav" href="https://www.linkedin.com/in/bonnie-q-jiang/">LinkedIn</a></li>
 			<li><a class="footernav" href="https://www.bonniejiang.com">Portfolio</a></li>
 		</ul>
 </footer>
 
-<script>
-/* Initiate Magnify Function
-with the id of the image, and the strength of the magnifier glass:*/
-/*magnify("groupdesigner", 2);*/
-</script>
 </body>
 </html>

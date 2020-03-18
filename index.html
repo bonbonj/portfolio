@@ -4,6 +4,15 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Home</title>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160995294-1"></script>
+	<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-160995294-1');
+	</script>
+
 	<link rel="stylesheet" href="css/style.css">
 	<script src = "js/portfolio.js"></script>
 </head>
@@ -11,6 +20,7 @@
 <body>
 	<div class="skip"><a href="#main">Skip to Main Content</a></div>
 <header>
+   <img src="images/logo.png" alt="logo" class="hidden" id = "logo">
 	<nav>
 		<ul>
 			<li><a class="active" href="index.html">Home</a></li>
@@ -26,7 +36,7 @@
 	</h1>
 <svg viewBox="0 0 1920 200" preserveAspectRatio="none" fill= #27496d ><path class="c1" d="M0 0h1920v64l-238-20-448 143L396 45 0 103z"></path></svg>
 	<div class="img-magnifier-container">
-  	<img id="groupdesigner" src="images/groupphoto.png" alt="find-which-type ">
+  	<img class= "hidden"id="groupdesigner" src="images/groupphoto.png" alt="find-which-type ">
 	</div>
 	<div>
 		<h2 id = "colorchange">

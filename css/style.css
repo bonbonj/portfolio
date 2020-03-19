@@ -162,8 +162,8 @@ img{
 }
 
 #myimage{
-  width: 100%
-  height:auto;
+  width: 100%;
+  height:auto
 }
 
 /*skip tp content*/
@@ -171,7 +171,6 @@ img{
   background: white;
   left: 0;
   padding: 6px;
-  -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
   position: absolute;
@@ -237,9 +236,19 @@ img{
 
 /*css animation: color change*/
 #colorchange {
-  animation-name: change;
-  animation-duration: 6s;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: change;
+          animation-name: change;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes change {
+  0%   {color: #27496d;}
+  25%  {color: #698474;}
+  50%  {color: #A85400;}
+  100% {color: #b7472a;}
 }
 
 @keyframes change {
@@ -263,7 +272,6 @@ img{
   background: #d3d3d3;
   outline: none;
   opacity: 0.7;
-  -webkit-transition: .2s;
   transition: opacity .2s;
 }
 
@@ -286,10 +294,29 @@ img{
   background: #00a8cc;
   cursor: pointer;
 }
+
 /*text effect*/
+/*referenced from https://css-tricks.com/animating-the-content-property/*/
 span:before{
   content:"People Person";
-  animation: animate infinite 5s;
+  -webkit-animation: animate infinite 5s;
+          animation: animate infinite 5s;
+}
+
+@-webkit-keyframes animate{
+  0%   {
+    content:"Researcher";
+    color: #27496d;}
+  25%  {
+    color: #698474;
+    content:"Designer"
+  }
+  50%  {
+    color: #A85400;
+    content:"Strategist"}
+  100% {
+    content:"Engineer";
+    color: #b7472a}
 }
 
 @keyframes animate{
@@ -304,11 +331,12 @@ span:before{
     color: #A85400;
     content:"Strategist"}
   100% {
-    content:"Engineer"
-    color: #b7472a;}
+    content:"Engineer";
+    color: #b7472a}
 }
 
 /*flip card*/
+/*leaarned from https://www.w3schools.com/howto/howto_css_flip_card.asp*/
 .flip-card {
   background-color: transparent;
   width: 500px;
@@ -388,6 +416,7 @@ input[type=submit]:hover {
 
 /* Tablet layout */
 @media all and (min-width:800px){
+
   /*magnifier-glass, modified from resouce of https://www.w3schools.com/howto/howto_js_image_magnifier_glass.asp*/
   .img-magnifier-container {
     position: relative;
@@ -402,15 +431,11 @@ input[type=submit]:hover {
     width: 200px;
     height: 200px;
   }
+
   /*parallax*/
   .parallax {
-    /* The image used */
     background-image: url("../images/parallax.png");
-
-    /* Set a specific height */
     min-height: 500px;
-
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -456,7 +481,6 @@ nav a{
 @media only screen and (min-width: 1024px){
 
 /* Desktop layout */
-
 h1{
   padding-left: 300px;
   padding-right: 300px;
@@ -489,25 +513,26 @@ nav ul{
 }
 
 
-}  /*End the media query*/
+}
 
 @media screen and (prefers-reduced-motion: reduce){
   html{
-      scroll-behavior: auto; /* Removes scroll animation */
+      scroll-behavior: auto;
   }
 
   .skip a{
-    -webkit-transition: none;
     transition: none;
   }
 
   #colorchange{
-    animation:none;
+    -webkit-animation:none;
+            animation:none;
   }
 
   span:before{
     content:"People Person";
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 
   nav a:hover, a:focus{
@@ -533,6 +558,5 @@ nav ul{
   .container img:hover{
     top:0px;
   }
-
 
 }

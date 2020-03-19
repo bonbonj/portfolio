@@ -111,7 +111,7 @@ h1{
 h2{
   color:#0c7b93;
   margin:0;
-  padding:200px;
+  padding:50px;
   text-align: center;
 }
 
@@ -247,20 +247,6 @@ img{
   25%  {color: #698474;}
   50%  {color: #A85400;}
   100% {color: #b7472a;}
-}
-/*magnifier-glass, modified from resouce of https://www.w3schools.com/howto/howto_js_image_magnifier_glass.asp*/
-.img-magnifier-container {
-  position: relative;
-}
-
-.img-magnifier-glass {
-  position: absolute;
-  border: 3px solid #000;
-  border-radius: 50%;
-  cursor: none;
-  /*Set the size of the magnifier glass:*/
-  width: 200px;
-  height: 200px;
 }
 
 /*Slider, modified from resouce of https://www.w3schools.com/howto/howto_js_rangeslider.asp*/
@@ -399,23 +385,37 @@ input[type=submit]:hover {
   background-color: #0c7b93;
 }
 
-/*parallax*/
-.parallax {
-  /* The image used */
-  background-image: url("../images/parallax.png");
-
-  /* Set a specific height */
-  min-height: 500px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 /* Tablet layout */
 @media all and (min-width:800px){
+  /*magnifier-glass, modified from resouce of https://www.w3schools.com/howto/howto_js_image_magnifier_glass.asp*/
+  .img-magnifier-container {
+    position: relative;
+  }
+
+  .img-magnifier-glass {
+    position: absolute;
+    border: 3px solid #000;
+    border-radius: 50%;
+    cursor: none;
+    /*Set the size of the magnifier glass:*/
+    width: 200px;
+    height: 200px;
+  }
+  /*parallax*/
+  .parallax {
+    /* The image used */
+    background-image: url("../images/parallax.png");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
 .hidden{
   display: flex;
@@ -453,7 +453,7 @@ nav a{
   	}
 
 }
-@media only screen and (min-width: 1200px){
+@media only screen and (min-width: 1024px){
 
 /* Desktop layout */
 
